@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,6 +30,15 @@ public class Vehicule {
     BigDecimal tarifJournalier;
     @Enumerated(EnumType.STRING)
     StatutVehicule statut;
+    @ManyToMany(fetch = FetchType.EAGER)
+    List<Equipement> equipements = new ArrayList<>();
+    @OneToMany(mappedBy = "Vehicule")
+    List<Reservation> reservations = new ArrayList<>();
+    @OneToMany(mappedBy = "Vehicule")
+    List<Maintenance> maintenances = new ArrayList<>();
+    @ManyToOne
+    Agence agence;
+
 
 
 }

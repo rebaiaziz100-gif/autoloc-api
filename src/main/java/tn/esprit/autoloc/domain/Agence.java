@@ -8,6 +8,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -22,5 +25,9 @@ public class Agence {
     String ville;
     String adresse;
     String telephone;
+    @OneToMany(mappedBy = "agence")
+    List<Employe> Employees = new ArrayList<>();
+    @OneToMany(mappedBy = "agence")
+    List<Vehicule> Vehicules = new ArrayList<>();
 
 }
