@@ -26,7 +26,7 @@ public class Contrat {
     boolean valide;
     @OneToOne(mappedBy = "contrat")
     Reservation reservation;
-    @OneToMany(mappedBy = "contart ", cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL,orphanRemoval = true)
     List<Paiement> paiements = new ArrayList<>();
 
 

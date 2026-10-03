@@ -29,7 +29,7 @@ public class Client {
     String telephone;
     String numPermis;
     LocalDate dateInscription;
-    @OneToMany(mappedBy = "Client")
+    @OneToMany(mappedBy = "client")
     List<Reservation> reservations = new ArrayList<>();
 
 

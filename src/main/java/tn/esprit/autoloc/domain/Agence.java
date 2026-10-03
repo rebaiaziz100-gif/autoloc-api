@@ -26,8 +26,8 @@ public class Agence {
     String adresse;
     String telephone;
     @OneToMany(mappedBy = "agence")
-    List<Employe> Employees = new ArrayList<>();
+    List<Employe> employe = new ArrayList<>();
     @OneToMany(mappedBy = "agence")
-    List<Vehicule> Vehicules = new ArrayList<>();
+    List<Vehicule> vehicule = new ArrayList<>();
 
 }

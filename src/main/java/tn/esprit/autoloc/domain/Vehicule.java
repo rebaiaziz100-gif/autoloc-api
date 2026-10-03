@@ -32,9 +32,9 @@ public class Vehicule {
     StatutVehicule statut;
     @ManyToMany(fetch = FetchType.EAGER)
     List<Equipement> equipements = new ArrayList<>();
-    @OneToMany(mappedBy = "Vehicule")
+    @OneToMany(mappedBy = "vehicule")
     List<Reservation> reservations = new ArrayList<>();
-    @OneToMany(mappedBy = "Vehicule")
+    @OneToMany(mappedBy = "vehicule")
     List<Maintenance> maintenances = new ArrayList<>();
     @ManyToOne
     Agence agence;
