@@ -1,9 +1,12 @@
 package tn.esprit.autoloc.service;
 
+import org.springframework.stereotype.Service;
 import tn.esprit.autoloc.domain.Contrat;
 
 import java.util.List;
 
+
+@Service
 public class IContratServiceImp implements IContratService {
 
     @Override
